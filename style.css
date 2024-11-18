@@ -1,94 +1,47 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-.counter-container {
-  max-width: 1080px;
-  margin: 0 auto;
+:root {
+  --text-color: #feb62b;
+  --counter-size: 69px;
+  --mobile-counter-size: 22px;
 }
 
-.counter-flex {
-  background-color: #000;
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.counter-card {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 80px;
-  margin-top: 10px;
-  position: relative;
-  z-index: 2;
-  /* Lower z-index than before element */
-  border-radius: 15px;
-  left: 0;
+  justify-content: start;
+  align-items: start;
+  gap: 30px;
+  font-family: "Montserrat", sans-serif;
 }
 
-.counter-flex::before {
-  content: "";
-  position: absolute;
-  bottom: 5px;
-  left: 0;
+.counter-child-image {
+  width: 90px;
+  height: 90px;
+}
+.counter-child-image img {
   width: 100%;
   height: 100%;
-  background-color: #efefef;
-  z-index: 1;
-  /* Lower z-index to place it behind content */
-  border-radius: 15px;
+  object-fit: contain;
 }
-
-.devider {
-  height: 70px;
-  width: 1px;
-  z-index: 99;
-  border: 1px dashed gray;
-  position: relative;
-  top: -5px;
-}
-
-.counter-box {
+.countting-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Poppins", sans-serif;
-  z-index: 2;
+  gap: 10px;
 }
 
-.counter-value {
-  font-weight: 800;
+.counting-value {
+  font-size: var(--counter-size);
 }
-
-.counter-container.hidden {
-  visibility: hidden;
-}
-
-.counter-container.visible {
-  visibility: visible;
-}
-
-.scroll {
-  width: 100%;
-  height: 100vh;
-}
-
-@media screen and (max-width: 540px) {
-  .counter-container {
-    padding: 0px 10px;
-  }
-
-  .counter-flex {
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .devider {
-    height: 1px;
-    width: 80px;
-  }
-  .counter-flex::before {
-    width: calc(100% + 0.5px);
-  }
+.countting-box p {
+  color: var(--text-color);
 }
