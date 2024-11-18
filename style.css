@@ -41,6 +41,7 @@
 
 .counting-value {
   font-size: var(--counter-size);
+  font-weight: 700;
 }
 .countting-box p {
   color: var(--text-color);
