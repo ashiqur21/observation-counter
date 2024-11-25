@@ -1,15 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Metrophobic&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 :root {
-  --text-color: #feb62b;
+  --text-color: #000;
   --counter-size: 69px;
   --mobile-counter-size: 22px;
 }
-
+.counter-container {
+  max-width: 1400px;
+  margin: auto;
+}
 .counter-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -18,10 +21,11 @@
 
 .counter-card {
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Metrophobic", sans-serif;
+  text-align: center;
 }
 
 .counter-child-image {
@@ -41,12 +45,15 @@
 
 .counting-value {
   font-size: var(--counter-size);
-  font-weight: 700;
 }
 .countting-box p {
   color: var(--text-color);
 }
-
+.custom-divider {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  width: 50%;
+  margin: auto;
+}
 @media screen and (max-width: 550px) {
   .counter-grid {
     grid-template-columns: repeat(1, 1fr);
